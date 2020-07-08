@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Smoke" verbose="1" configfailurepolicy="continue">
+
+    <listeners>
+        <listener class-name="report.ExtentReportListener" />
+    </listeners>
+    <test name="Smoke">
+        <groups>
+            <run>
+                <include name="Smoke" />
+            </run>
+        </groups>
+
+        <classes>
+
+                        <!-- Nikshala Plant Smoke Test          -->
+            <class name="com.test.qa.plant.PlantTest"/>
+            <class name="com.test.qa.equipment.EqupmentTest"></class>
+
+
+                     <!-- Nikashala Equipment Smoke Test   -->
+            <class name="com.test.qa.equipment.AddPlantEquipmentTest"/>
+
+                         <!-- Daklas concreeteMixTest Smoke Test         -->
+            <class name="com.test.qa.test.concreeteMixTest.ConcreteMixTest"></class>
+                        <!-- Jathu Designation Smoke Test-->
+            <class name="com.test.qa.Designation.DesignationTest"/>
+                        <!--Banu Smoke Test-->
+            <class name="com.test.qa.Role.RoleTest"/>
+                        <!-- vinthu employeeSmoke Test         -->
+            <class name="com.test.qa.employee.EmployeeTest"/>
+                        <!--  Kaju SupplierCatecory SmokeTest       -->
+            <class name="com.test.qa.SupplierCatecory.SupplierCatecoryTest"/>
+                         <!-- Thushi  Team Smoke Test-->
+            <class name="com.test.qa.Supplier.SupplierTest"/>
+
+                     <!-- vinthu Category Smoke Test  -->
+            <class name="com.test.qa.category.MaterialCategoryTest"/>
+            <class name="com.test.qa.category.MaterialSubCategoryTest"/>
+
+                     <!--jathu  Material Smoke Test -->
+            <class name="com.test.qa.MaterialStateTest.MaterialStateTest"/>
+            <class name="com.test.qa.MaterialStateTest.MaterialsTest"/>
+
+                         <!--Daklas Site Smoke Test-->
+            <class name="com.test.qa.Site.SiteProjectTest"/>
+            <class name="com.test.qa.Site.SiteProjectPourTest"/>
+
+        </classes>
+    </test>
+</suite>
