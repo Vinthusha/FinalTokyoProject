@@ -5,7 +5,7 @@ import com.test.qa.tokyo.DisplayDashboard.master.SupplierNV.SupplierCatecory;
 import com.test.qa.utils.TestBase;
 import org.testng.annotations.Test;
 
-public class SupplierCatecoryTest extends TestBase {
+/*public class SupplierCatecoryTest extends TestBase {
     @Test(priority = 1,dataProviderClass = SupplierCatecoryData.class, dataProvider = "Supplierdataprovider")
     public void TokiyomasterTest(String Category,String Description) {
         SupplierCatecory.clickMasterPanel();
@@ -20,10 +20,10 @@ public class SupplierCatecoryTest extends TestBase {
     public void SupplierCatecorySmokeTest() {
         SupplierCatecory.clickMasterPanel();
         SupplierCatecory.clickSupCatpanel();
-        SupplierCatecory.clickAddSupCatpanel();
+        SupplierCatecory.();
         SupplierCatecory.setsupplier_category("sand");
         SupplierCatecory.setsupplierCategory_description("collect");
         SupplierCatecory.clickplantSave();
 
-    }
-}
+    }*/
+

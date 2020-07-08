@@ -13,32 +13,29 @@ public class SupplierCatecory extends PageBase {
 
     private static final Logger LOGGER = (Logger) Logger.getLogger(String.valueOf(PlantPanel.class));
 
-    private static By plantSuplierCatPanel = By.xpath("//*[@id=\"root\"]/div/section/section/main/div/div[1]/div[7]");
-    private static By btnAddSupplierCategory = By.xpath("//*[@id=\"root\"]/div/section/section/main/div/div[2]/div/div/div/div[1]/div/div[2]/button");
+    private static By MenuTabSupplier = By.xpath("//*[@id=\"root\"]/div/section/section/header/ul/li[13]/a");
 
-    private static By txtCatecory = By.xpath( "//*[@id=\"supplier_category\"]");
+    private static By plantSuplierCatPanel = By.xpath("//*[@id=\"root\"]/div/section/section/main/div/div[1]/div[1]/div[1]");
+    private static By btnAddSupplierCategory = By.xpath("//*[@id=\"root\"]/div/section/section/main/div/div[2]/div/div/div/div[1]/div/div[2]/div/button");
+
+    private static By txtCatecory = By.id("supplier_name");
     private static By txtsupplierCategory_description = By.xpath("//*[@id=\"supplierCategory_description\"]");
 
     private static By butPlantSave = By.xpath("//*[@type=\"button\"][2]");
 
     private static By masterMenu = By.xpath("//*[@id=\"root\"]/div/section/section/main/div/div[1]/div[1]/a[1]/div/div");
 
-    private static By AddSubCat = By.xpath("//*[@id=\"root\"]/div/section/section/main/div/div[2]/div/div/div/div[1]/div/div[2]/button");
 
 
-    public static void clickAddSupCatpanel() {
-
-        getDriver().findElement(AddSubCat).click();
-    }
     public static void clickSupCatpanel() {
 
         getDriver().findElement(plantSuplierCatPanel).click();
     }
-/*
-    public static void clickAddpanel() {
+    /*
+        public static void clickAddpanel() {
 
-        getDriver().findElement(btnAddSupplierCategory).click();
-    }*/
+            getDriver().findElement(btnAddSupplierCategory).click();
+        }*/
     public static void setsupplier_category(String supplier_category) {
 
         getDriver().findElement(txtCatecory).sendKeys(supplier_category);

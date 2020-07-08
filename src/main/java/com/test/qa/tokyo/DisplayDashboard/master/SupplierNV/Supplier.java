@@ -1,5 +1,6 @@
 package com.test.qa.tokyo.DisplayDashboard.master.SupplierNV;
 
+import com.sun.org.apache.bcel.internal.generic.Select;
 import org.openqa.selenium.By;
 import org.testng.asserts.SoftAssert;
 
@@ -15,49 +16,69 @@ public class Supplier extends PageBase {
 
     private static final Logger LOGGER = (Logger) Logger.getLogger(String.valueOf(Supplier.class));
 
-    private static By supplierName = By.xpath("//input[@id=\"supplier_name\"]");
-    private static By companyName = By.xpath("//input[@id=\"supplier_company_name\"]");
-    private static By suppcatergory = By.xpath("//input[@id=\"supplier_category\"]");
-    private static By address = By.xpath("//input[@id=\"supplier_address\"]");
-    private static By contactno = By.xpath("//input[@id=\"supplier_contactno\"]");
-    private static By email = By.xpath("//input[@id=\"supplier_email\"]");
+    private static By master = By.xpath("//*[@id=\"root\"]/div/section/section/main/div/div[1]/div[1]/a[1]/div/div");
+    private static By Menusupplier = By.xpath("//*[@id=\"root\"]/div/section/section/header/ul/li[13]/a");
+    private static By supplierFiled = By.xpath("//*[@id=\"root\"]/div/section/section/main/div/div[1]/div[2]");
+    private static By AddSupplier = By.xpath("//*[@id=\"root\"]/div/section/section/main/div/div[2]/div/div/div/div[1]/div/div[2]/div/button");
+    private static By supplierName = By.id("supplier_name");
+    private static By companyName = By.id("supplier_company_name");
+    private static By suppcatergory = By.xpath("//*[@id=\"supplier_category\"]/div");
+    private static By address = By.id("supplier_address");
+    private static By contactno = By.id("supplier_contactno");
+    private static By email = By.id("supplier_email");
     private static By plant = By.xpath("//*[@id=\"supplier_plant\"]/div/div");
-    private static By cancel = By.xpath("//input[@id=\"ant-btn\"]");
+
 
     private static By save = By.xpath("/html/body/div[8]/div/div[2]/div/div[2]/div[3]/button[2]");
     private static By dashboard = By.xpath("//a[@href=\"#/dashboard\"]");
 
-  //  private static WebElement save = ("");
     private static String BtnCancel = "/html/body/div[2]/div/div[2]/div/div[2]/div[3]/div/button[1]";
 
-    private static By clickmaster = By.xpath("//h1[contains(text(),'Master')]");
-    private static By clicksupplier = By.xpath("//*[@id=\"root\"]/div/section/section/main/div/div[1]/div[8]/div[1]");
-    private static By clickAddSupplier = By.xpath("//*[@id=\"root\"]/div/section/section/main/div/div[2]/div/div/div/div[1]/div/div[2]/div/button");
-    private static By Alert = By.xpath("/html/body/div[7]/div/div[2]/div/div[2]/div[2]/form/div[1]/div[1]/div[1]/div/div[1]");
-    private static By updateAlert  =By.xpath("//*[@class=\"ant-notification-notice-message\"]");
-    private static By editbt  =By.xpath("//*[@data-icon=\"edit\"]");
 
-    public static boolean isSupplierDisplay() {
 
-        return getDriver().findElement(clicksupplier).isDisplayed();
+    public static void clickMaster() {
+        getDriver().findElement(master).click();
+
     }
 
+    public static void clickMenusupplier() {
+        getDriver().findElement(Menusupplier).click();
+
+    }
+
+    public static void clickSupplier() {
+        getDriver().findElement(supplierFiled).click();
+
+    }
+
+    public static void clickAddSupplier() {
+        getDriver().findElement(AddSupplier).click();
+
+    }
+
+
     public static void setsupplierName(String supplier_name) {
-        getDriver().findElement(supplierName).clear();
+
         getDriver().findElement(supplierName).sendKeys(supplier_name);
 
     }
-    public static void clickAddDefect() {
-        MethodBase.click(BtnCancel);
 
-    }
     public static void setcompanyName(String supplier_company_name) {
         getDriver().findElement(companyName).clear();
         getDriver().findElement(companyName).sendKeys(supplier_company_name);
     }
-    public static void setsuppcatergory(String supplier_category) {
+
+    public static void setsupcategory(String supp_category) {
         getDriver().findElement(suppcatergory).clear();
-        getDriver().findElement(suppcatergory).sendKeys(supplier_category);
+        getDriver().findElement(suppcatergory).sendKeys(supp_category);
+    }
+
+
+
+
+    public static void setsuppcatergory(String suppliercatename) {
+        getDriver().findElement(suppcatergory).clear();
+        getDriver().findElement(suppcatergory).sendKeys(suppliercatename);
     }
     public static void setaddress(String supplier_address) {
         getDriver().findElement(address).clear();
@@ -71,47 +92,21 @@ public class Supplier extends PageBase {
         getDriver().findElement(email).clear();
         getDriver().findElement(email).sendKeys(supplier_email);
     }
-    public static void clickplant() {
+
+    public static void clickplant() throws Exception {
         getDriver().findElement(plant).click();
+        PageBase.hitEnter();
+        getDriver().findElement(suppcatergory).click();
+
     }
-    public static void clickcancel() {
-        getDriver().findElement(cancel).click();
-    }
-    public static void clicksave() {
+
+    public static void clikSave() {
         getDriver().findElement(save).click();
-    }
-    public static void clickMaster() {
 
-        getDriver().findElement(clickmaster).click();
-    }
-    public static void clicksupplier() {
-
-        getDriver().findElement(clicksupplier).click();
-    }
-
-    public static boolean isdashboardDisplay() {
-
-        return getDriver().findElement(dashboard).isDisplayed();
-    }
-
-    public static void ClickAddSupplier() {
-
-        getDriver().findElement(clickAddSupplier).click();
-    }
-
-    public static void UpdateAlert() {
-
-        getDriver().findElement(updateAlert).click();
     }
 
 
-    public static void clickeditbt() {
 
-        getDriver().findElement(editbt).click();
-    }
 
-  /*  public static String getAlertMsg() {
-        return  getDriver().findElement(Alert).getText();
-    }*/
 
 }

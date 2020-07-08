@@ -18,7 +18,7 @@ public class CustomerTest extends TestBase {
         Customer.setAddress("Navali");
         Customer.setContactNO("07698345689");
         Customer.setEmail("banu56@gmail.com");
-        Customer.setdropdownPlant("colombo");
+        // Customer.setdropdownPlant("colombo");
         Customer.setbutCustomerSave();
 
     }
@@ -28,12 +28,13 @@ public class CustomerTest extends TestBase {
         softAssert = new SoftAssert();
         Customer.clickMasterMenu();
         Customer.clickCustomer();
+        Customer.clickCustomerField();
         Customer.clickAddCustomer();
         Customer.setCustomerName("Banuja");
         Customer.setAddress("Navali");
         Customer.setContactNO("07698345689");
         Customer.setEmail("banu56@gmail.com");
-        Customer.setdropdownPlant("colombo");
+        Customer.setdropdownPlant();
         Customer.setbutCustomerSave();
         softAssert.assertAll();
     }
