@@ -10,11 +10,12 @@ import utils.PageBase;
 public class RolePage extends PageBase {
     public SoftAssert softAssert;
 
-// web element delcartion
-    private static By masterMenu = By.xpath("//h1[contains(text(),'Master')]");
-    private static By roleMenu = By.xpath("//div[contains(text(),'Role')]");
+    // web element delcartion
+    private static By masterMenu = By.xpath("//*[@id=\"root\"]/div/section/section/main/div/div[1]/div[1]/a[1]/div/div");
+    private static By employee = By.xpath("//*[@id=\"root\"]/div/section/section/header/ul/li[15]/a");
+    private static By roleMenu = By.xpath("//*[@id=\"root\"]/div/section/section/main/div/div[1]/div[2]");
     private static By addRole = By.xpath("//*[@id=\"root\"]/div/section/section/main/div/div[2]/div/div/div/div[1]/div/div[2]/button");
-    private static By txtCongerete = By.id("concrete_type");
+    private static By txtCongerete = By.xpath("//*[@id=\"role_name\"]");
     private static By btnSave = By.xpath("/html/body/div[3]/div/div[2]/div/div[2]/div[3]/button[2]");
 
     //Method for clickMaster
@@ -51,5 +52,8 @@ public class RolePage extends PageBase {
     public static boolean getRoleAlert() {
 
         return getDriver().findElement(roleMenu).isDisplayed();
+    }
+    public static void clickemployee(){
+        getDriver().findElement(employee).click();
     }
 }

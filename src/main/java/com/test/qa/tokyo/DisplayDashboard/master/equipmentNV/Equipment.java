@@ -17,7 +17,7 @@ public class Equipment extends PageBase {
     private static By txtequipment =By.id("equipment_name");
     private static By txtdescription =By.id("equipment_description");
     private static By type =By.xpath("//*[@id=\"type\"]/div/div");
-    private static By btnsave =By.xpath("/html/body/div[5]/div/div[2]/div/div[2]/div[3]/button[2]");
+    private static By btnsave =By.xpath("/html/body/div[6]/div/div[2]/div/div[2]/div[3]/button[2]");
 
     // method for mastermenu
     public static void clickMasterPanel() {
@@ -43,16 +43,12 @@ public class Equipment extends PageBase {
     public static void setDescription(String description){
         getDriver().findElement(txtdescription).sendKeys(description);
     }
-    // Method for clicktype
-    public static void clicktype(){
-        getDriver().findElement(type).click();
-    }
     // Method for clicktypedropdown
-    public static void clicktypedropdown() throws Exception {
+
+    public static void selecttype() throws Exception {
         getDriver().findElement(type).click();
         PageBase.hitEnter();
     }
-
     // Metgod for clicksavebtn
     public static void clicksavebtn(){
         getDriver().findElement(btnsave).click();

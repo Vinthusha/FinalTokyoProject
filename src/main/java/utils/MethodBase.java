@@ -32,14 +32,26 @@ public class MethodBase extends Constants {
 
 
     /* To Press ENTER Key using Robot */
-    public void hitEnter() throws Exception
+    public static void hitEnter() throws Exception
     {
         re = new Robot();
         re.keyPress(KeyEvent.VK_ENTER);
         re.keyRelease(KeyEvent.VK_ENTER);
     }
 
+    public static void upKey() throws Exception
+    {
+        re = new Robot();
+        re.keyPress(KeyEvent.VK_PAGE_UP );
+        re.keyRelease(KeyEvent.VK_PAGE_UP);
+    }
 
+    public static void downKey() throws Exception
+    {
+        re = new Robot();
+        re.keyPress(KeyEvent.VK_PAGE_DOWN );
+        re.keyRelease(KeyEvent.VK_PAGE_DOWN);
+    }
     /* To Press BACKSPACE Key using Robot */
     public void hitBackspace() throws Exception
     {

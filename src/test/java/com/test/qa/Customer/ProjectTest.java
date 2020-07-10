@@ -12,15 +12,14 @@ public class ProjectTest extends TestBase {
         Project.clickMasterMenu();
         Project.clickMenuCustomer();
         Project.clickproject();
+        Project.clickAddproject();
         Project.setprojectname("hospit");
         Project.setprojectcalender();
         Project.setprojectcontactno("07789654123");
-        Project.setprojectconatctperson("jasmi");
-        Project.clickprojectplant();
-
-        Project.clickprojectcustomer();
+        Project.setprojectconatctperson("jasmithaya");
+        Project.selectPlantdropdown();
+        Project.selectcustomerdropdown();
         Project.clicksave();
-
         softAssert.assertAll();
     }
 

@@ -7,20 +7,19 @@ import com.test.qa.tokyo.LoginPage;
 import com.test.qa.utils.TestBase;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-
+import utils.MethodBase;
 
 
 public class AddPlantEquipmentTest extends TestBase {
     @Test(groups = {"test", "regression", "smoke"}, priority = 2, dataProviderClass = EquipmentData.class, dataProvider = "equipmentdataprovider")
-    public void TokiyoequipmentTest(String serialno, String equipment, String plant, String brandname, String modelname, String descripion) {
+    public void TokiyoequipmentTest(String serialno, String equipment, String plant, String brandname, String modelname, String descripion) throws Exception {
         softAssert = new SoftAssert();
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "LoginPage Displayed");
         PlantPanel.clickMasterPanel();
         AddPlantEquipment.clickEquipmentPanel();
         AddPlantEquipment.clickAddPlantEquipment();
         AddPlantEquipment.setSerialno(serialno);
-        AddPlantEquipment.setequipment(equipment);
-        AddPlantEquipment.setplant(plant);
+
         AddPlantEquipment.setbrandname(brandname);
         AddPlantEquipment.setmodelnmae(modelname);
         AddPlantEquipment.setdescription(descripion);
@@ -29,20 +28,22 @@ public class AddPlantEquipmentTest extends TestBase {
 
     }
     @Test(groups = {"Smoke"}, priority = 1)
-    public void plantequipmentSmokeTest() {
+    public void plantequipmentSmokeTest() throws Exception {
         AddPlantEquipment.clickMasterPanel();
         AddPlantEquipment.clickEquipmentPanel();
         AddPlantEquipment.clickplantequipmentField();
-        AddPlantEquipment.setSerialno("003");
-        AddPlantEquipment.setequipment("Oven");
-        AddPlantEquipment.setplant("mannar");
-        AddPlantEquipment.setbrandname("Apans");
-        AddPlantEquipment.setmodelnmae("C001");
-        AddPlantEquipment.setdescription("Tool");
+        AddPlantEquipment.clickAddPlantEquipment();
+        AddPlantEquipment.setSerialno("S002");
+        AddPlantEquipment.selectPlanteuip();
+        AddPlantEquipment.selectPlantplant();
+        AddPlantEquipment.setbrandname("bans");
+        AddPlantEquipment.setmodelnmae("S0015");
+        AddPlantEquipment.setdescription("data");
         AddPlantEquipment.clickbut();
         softAssert.assertAll();
     }
 }
+
 
 
 

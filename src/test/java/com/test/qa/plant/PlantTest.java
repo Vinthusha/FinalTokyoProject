@@ -18,7 +18,7 @@ public class PlantTest  extends TestBase {
     private static final Logger LOGGER =  Logger.getLogger(String.valueOf((PlantPanel.class)));
 
     // use testng annoation and group , piriority
-    @Test(groups = { "test", "regression",},priority = 1,dataProviderClass = PlantData.class,dataProvider = "PlantDetail")
+    @Test(groups = { "test", "regression",},priority = 2,dataProviderClass = PlantData.class,dataProvider = "PlantDetail")
     public void TokiyomasterTest(String code,String plant,String address,String fax,String contacno,String description) {
 
 //using soft assert
@@ -39,7 +39,7 @@ public class PlantTest  extends TestBase {
         softAssert.assertAll();
     }
     //Testng and group for smoke
-    @Test(groups = {"Smoke" },priority = 2)
+    @Test(groups = {"Smoke" },priority = 1)
     public void PlantSmokeTest() {
 
         softAssert = new SoftAssert();
@@ -47,11 +47,11 @@ public class PlantTest  extends TestBase {
         PlantPanel.clickMasterPanel();
         PlantPanel.clickPlantpanel();
         PlantPanel.clickAddpanel();
-        PlantPanel.setCode("C002");
-        PlantPanel.setName("vavuniya");
-        PlantPanel.setAddress("vavuniya");
-        PlantPanel.setContacno("07696693569");
-        PlantPanel.setFax("07696693569");
+        PlantPanel.setCode("C001");
+        PlantPanel.setName("Mullaithivu");
+        PlantPanel.setAddress("Mullaithivu");
+        PlantPanel.setContacno("07696993569");
+        PlantPanel.setFax("07696993569");
         PlantPanel.setDescription("Description");
         PlantPanel.clickSavebutten();
         softAssert.assertAll();

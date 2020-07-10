@@ -1,6 +1,7 @@
 package com.test.qa.tokyo.DisplayDashboard.master.CustomerNV;
 
 import org.openqa.selenium.By;
+import utils.MethodBase;
 import utils.PageBase;
 
 public class Project extends PageBase {
@@ -13,7 +14,7 @@ public class Project extends PageBase {
     private static By projectcontactno = By.id("contact_no");
     private static By projectconatctperson = By.id("contact_person");
     private static By projectplant = By.xpath("//*[@id=\"plant\"]/div/div");
-    private static By projectcustomer = By.xpath("//*[@id=\"customer\"]/div/div");
+    private static By projectdropcustomer = By.xpath("//*[@id=\"customer\"]/div/div");
     private static By save = By.xpath("/html/body/div[10]/div/div[2]/div/div[2]/div[3]/button[2]");
 
 
@@ -39,8 +40,9 @@ public class Project extends PageBase {
         getDriver().findElement(projectname).sendKeys(pname);
     }
 
-    public static void setprojectcalender() {
+    public static void setprojectcalender() throws Exception {
         getDriver().findElement(calender).click();
+        MethodBase.hitEnter();
     }
 
     public static void setprojectcontactno(String cno) {
@@ -51,13 +53,13 @@ public class Project extends PageBase {
         getDriver().findElement(projectconatctperson).sendKeys(cperson);
     }
 
-    public static void clickprojectplant() throws Exception {
+    public static void selectPlantdropdown() throws Exception {
         getDriver().findElement(projectplant).click();
         PageBase.hitEnter();
     }
 
-    public static void clickprojectcustomer() throws Exception {
-        getDriver().findElement(projectcustomer).click();
+    public static void selectcustomerdropdown() throws Exception {
+        getDriver().findElement(projectdropcustomer).click();
         PageBase.hitEnter();
     }
 

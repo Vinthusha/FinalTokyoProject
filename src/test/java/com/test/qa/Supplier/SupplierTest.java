@@ -16,12 +16,17 @@ public class SupplierTest extends TestBase {
 
         Supplier.clickMaster();
         Supplier.clickMenusupplier();
-        Supplier.setsupplierName(Sname);
-        Supplier.setcompanyName(Cname);
-        Supplier.setsuppcatergory(category);
-        Supplier.setaddress(address);
-        Supplier.setcontactno(contactno);
-        Supplier.setemail(email);
+        Supplier.clickSupplier();
+        Supplier.clickAddSupplier();
+        Supplier.suppcatergory();
+        Supplier.setsupplierName("AgroSuppliers");
+        Supplier.setcompanyName("Tokiyocement");
+        Supplier.selectplant();
+        Supplier.setcontactno("0777945636");
+        Supplier.setemail("tokiycement@gmail.com");
+        Supplier.setaddress("colombo");
+        Supplier.clikSave();
+
 
 
     }
@@ -32,14 +37,13 @@ public class SupplierTest extends TestBase {
         Supplier.clickMenusupplier();
         Supplier.clickSupplier();
         Supplier.clickAddSupplier();
+        Supplier.suppcatergory();
         Supplier.setsupplierName("AgroSuppliers");
         Supplier.setcompanyName("Tokiyocement");
-        Supplier.setsuppcatergory("admixture supplier");
-
-        Supplier.setaddress("colombo");
+        Supplier.selectplant();
         Supplier.setcontactno("0777945636");
         Supplier.setemail("tokiycement@gmail.com");
-        Supplier.clickplant();
+        Supplier.setaddress("colombo");
         Supplier.clikSave();
 
 

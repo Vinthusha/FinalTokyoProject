@@ -38,7 +38,6 @@ public class Supplier extends PageBase {
 
     public static void clickMaster() {
         getDriver().findElement(master).click();
-
     }
 
     public static void clickMenusupplier() {
@@ -68,18 +67,22 @@ public class Supplier extends PageBase {
         getDriver().findElement(companyName).sendKeys(supplier_company_name);
     }
 
-    public static void setsupcategory(String supp_category) {
-        getDriver().findElement(suppcatergory).clear();
-        getDriver().findElement(suppcatergory).sendKeys(supp_category);
-    }
-
-
-
-
-    public static void setsuppcatergory(String suppliercatename) {
-        getDriver().findElement(suppcatergory).clear();
-        getDriver().findElement(suppcatergory).sendKeys(suppliercatename);
-    }
+//    public static void setsupcategory(String supp_category) {
+//        getDriver().findElement(suppcatergory).clear();
+//        getDriver().findElement(suppcatergory).sendKeys(supp_category);
+//    }
+//
+//
+//
+//
+//    public static void setsuppcatergory(String suppliercatename) {
+//        getDriver().findElement(suppcatergory).clear();
+//        getDriver().findElement(suppcatergory).sendKeys(suppliercatename);
+//    }
+    public static void suppcatergory() throws Exception {
+        getDriver().findElement(suppcatergory).click();
+        PageBase.hitEnter();
+}
     public static void setaddress(String supplier_address) {
         getDriver().findElement(address).clear();
         getDriver().findElement(address).sendKeys(supplier_address);
@@ -93,11 +96,9 @@ public class Supplier extends PageBase {
         getDriver().findElement(email).sendKeys(supplier_email);
     }
 
-    public static void clickplant() throws Exception {
+    public static void selectplant() throws Exception {
         getDriver().findElement(plant).click();
         PageBase.hitEnter();
-        getDriver().findElement(suppcatergory).click();
-
     }
 
     public static void clikSave() {

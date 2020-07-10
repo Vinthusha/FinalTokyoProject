@@ -4,6 +4,7 @@ import com.test.qa.testdata.RoleData;
 import com.test.qa.tokyo.DisplayDashboard.master.EmployeeNV.RolePage;
 import com.test.qa.utils.TestBase;
 import org.testng.annotations.Test;
+import utils.MethodBase;
 
 import java.util.logging.Logger;
 /**
@@ -11,7 +12,6 @@ import java.util.logging.Logger;
  */
 
 public class RoleTest extends TestBase {
-   // the logger printing
     private static final Logger LOGGER = Logger.getLogger(String.valueOf(RolePage.class));
 
     // use testng and group and use the priority
@@ -27,27 +27,16 @@ public class RoleTest extends TestBase {
         RolePage.setRolCongerete(role);
         RolePage.clickSave();
 
-// validation checking
-      if(status.equals("pass")){
-        softAssert.assertTrue(RolePage.isDisplayRole());
-          LOGGER.info("Data Add sucessfully");
-
-        }
-      else {
-          RolePage.isDisplayRole();
-          RolePage.getRoleAlert();
-          softAssert.assertEquals(RolePage.isDisplayRole(),alertmsg);
-          LOGGER.info("Älert Message");
-      }
-
     }
 
-// testng annotation use , group and smoke
+    // testng annotation use , group and smoke
     @Test(groups = {"smoke"},priority = 1)
     public void RoleSmokeTest() {
         RolePage.clickMaster();
+        RolePage.clickemployee();
         RolePage.clickRole();
         RolePage.clickaddRole();
+//        MethodBase.setText_ByXpath("//*[@id=\"role_name\"]","kkkk");
         RolePage.setRolCongerete("banu");
         RolePage.clickSave();
     }
