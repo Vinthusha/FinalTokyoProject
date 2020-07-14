@@ -475,4 +475,10 @@ public class MethodBase extends Constants {
         softAssert.assertEquals(actualText,expectedText);
         softAssert.assertAll();
     }
+
+
+    public  static void sendKeys(String locator,String value) {
+
+        getDriver().findElement(By.id(locator)).sendKeys(value);
+    }
 }

@@ -15,21 +15,21 @@
         <classes>
 
 
-            <class name="com.test.qa.plant.PlantTest"></class>
-            <class name="com.test.qa.equipment.EqupmentTest"></class>
-            <class name="com.test.qa.equipment.AddPlantEquipmentTest"></class>
+            <class name="master.plant.PlantTest"></class>
+            <class name="master.equipment.EqupmentTest"></class>
+            <class name="master.equipment.AddPlantEquipmentTest"></class>
 
-            <class name="com.test.qa.Customer.CustomerTest"></class>
-            <class name="com.test.qa.Customer.ProjectTest"></class>
-            <class name="com.test.qa.Customer.DeliveryCycleTest"></class>
+            <class name="master.Customer.CustomerTest"></class>
+            <class name="master.Customer.ProjectTest"></class>
+            <class name="master.Customer.DeliveryCycleTest"></class>
 
 
-            <class name="com.test.qa.Supplier.SupplierTest"></class>
+            <class name="master.Supplier.SupplierTest"></class>
 
-            <class name="com.test.qa.Designation.DesignationTest"></class>
-            <class name="com.test.qa.Role.RoleTest"></class>
-            <class name="com.test.qa.employee.EmployeeTest"></class>
-            <class name="com.test.qa.User.UserTest"></class>
+            <class name="master.Designation.DesignationTest"></class>
+            <class name="master.Role.RoleTest"></class>
+            <class name="master.employee.EmployeeTest"></class>
+            <class name="master.User.UserTest"></class>
 
         </classes>
     </test>

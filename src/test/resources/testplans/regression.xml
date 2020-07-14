@@ -13,7 +13,7 @@
         </groups>
 
         <classes>
-         <class name="com.test.qa.test.LoginTest"/>-->
+         <class name="master.test.LoginTest"/>-->
         </classes>
     </test>
 </suite>

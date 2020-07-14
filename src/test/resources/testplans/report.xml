@@ -11,7 +11,7 @@
     <test name="Regression" >
         <classes>
 
-            <class name="com.test.qa.test.LoginTest"></class>
+            <class name="master.test.LoginTest"></class>
 
 
         </classes>
