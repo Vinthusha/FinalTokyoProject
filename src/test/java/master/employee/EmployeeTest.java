@@ -5,6 +5,8 @@ import com.test.qa.tokyo.DisplayDashboard.master.EmployeeNV.EmployeeList;
 import com.test.qa.utils.TestBase;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+import utils.MethodBase;
+import utils.PageBase;
 
 import java.util.logging.Logger;
 
@@ -23,9 +25,7 @@ public class EmployeeTest extends TestBase {
         softAssert.assertTrue(EmployeeList.isdashboardDisplay(), "AddEmployeePanal displayed");
         EmployeeList.setfname("fname");
         EmployeeList.setlname("lname");
-
         EmployeeList.selectPlantOption1();
-
         EmployeeList.setSelectDesignation1();
         EmployeeList.setaddress("address");
         EmployeeList.setnumber("contactno");
@@ -37,20 +37,23 @@ public class EmployeeTest extends TestBase {
     @Test(groups = {"Smoke"}, priority = 1)
     public void employeeSmokeTest() throws Exception {
         softAssert = new SoftAssert();
-
         EmployeeList.clickMasterMenu();
         EmployeeList.clickEmployee();
         EmployeeList.clickbtnEmployee();
         EmployeeList.clickAddEmployee();
-        softAssert.assertTrue(EmployeeList.isdashboardDisplay(), "AddEmployeePanal displayed");
-        EmployeeList.setfname("sathurya");
-        EmployeeList.setlname("jeyaveersingam");
-        EmployeeList.selectPlantOption1();
-        EmployeeList.setSelectDesignation1();
-        EmployeeList.setaddress("Jaffna");
-        EmployeeList.setnumber("0771234567");
-        EmployeeList.setemail("sathurya@gmail.com");
+//        softAssert.assertTrue(EmployeeList.isdashboardDisplay(), "AddEmployeePanal displayed");
+        EmployeeList.setfname("kalaivani");
+        EmployeeList.setlname("Raja");
+        MethodBase.click_ByXpath("//*[@id=\"plant\"]/div/div"); // click plant
+        PageBase.staticWait(01);
+        MethodBase.hitEnter();
+        MethodBase.click_ByXpath("//*[@id=\"desigination\"]/div/div"); // click designation
+        PageBase.staticWait(01);
+        MethodBase.hitEnter();
+        EmployeeList.setaddress("colombo");
+        EmployeeList.setnumber("0769835695");
+        EmployeeList.setemail("Kalai25@gmail.com");
         EmployeeList.clicksavebtn();
-
+        softAssert.assertAll();
     }
 }
