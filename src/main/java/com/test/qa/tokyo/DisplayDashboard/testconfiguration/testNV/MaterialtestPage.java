@@ -1,6 +1,5 @@
 package com.test.qa.tokyo.DisplayDashboard.testconfiguration.testNV;
 
-import org.openqa.selenium.By;
 import utils.MethodBase;
 import utils.PageBase;
 

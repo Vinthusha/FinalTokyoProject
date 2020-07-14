@@ -1,8 +1,6 @@
 package testconfiguration.testNV;
 
 import com.test.qa.testdata.configuredata.MaterialTestData;
-import com.test.qa.testdata.masterdata.PlantData;
-import com.test.qa.tokyo.DisplayDashboard.master.PlantNV.PlantPanel;
 import com.test.qa.tokyo.DisplayDashboard.testconfiguration.testNV.MaterialtestPage;
 import com.test.qa.tokyo.LoginPage;
 import com.test.qa.utils.TestBase;
@@ -42,7 +40,7 @@ public class MaterialTest extends TestBase {
         MaterialtestPage.clickMenuTest();
         MaterialtestPage.clickMaterialtestfield();
         MaterialtestPage.clickbutaddTest();
-        MaterialtestPage.sendtxtTest();
+       // MaterialtestPage.sendtxtTest(testname);
         MaterialtestPage.clickbutsave();
         softAssert.assertAll();
     }
