@@ -3,7 +3,9 @@ package ResultReport;
 import com.test.qa.utils.TestBase;
 import org.testng.annotations.Test;
 import utils.MethodBase;
-
+/**
+ *Author Daclas
+ */
 public class RawMaterialTestResult extends TestBase {
     @Test
     public void RawMaterialTestResult(){
