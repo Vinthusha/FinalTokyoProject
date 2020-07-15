@@ -20,7 +20,7 @@ public class Supplier extends PageBase {
     private static By Menusupplier = By.xpath("//*[@id=\"root\"]/div/section/section/header/ul/li[13]/a");
     private static By supplierFiled = By.xpath("//*[@id=\"root\"]/div/section/section/main/div/div[1]/div[2]");
     private static By AddSupplier = By.xpath("//*[@id=\"root\"]/div/section/section/main/div/div[2]/div/div/div/div[1]/div/div[2]/div/button");
-    private static By supplierName = By.id("supplier_name");
+    private static By supplierName = By.xpath("//*[@id=\"supplier_category\"]/div/div");
     private static By companyName = By.id("supplier_company_name");
     private static By suppcatergory = By.xpath("//*[@id=\"supplier_category\"]/div");
     private static By address = By.id("supplier_address");
@@ -63,22 +63,10 @@ public class Supplier extends PageBase {
     }
 
     public static void setcompanyName(String supplier_company_name) {
-        getDriver().findElement(companyName).clear();
+
         getDriver().findElement(companyName).sendKeys(supplier_company_name);
     }
 
-//    public static void setsupcategory(String supp_category) {
-//        getDriver().findElement(suppcatergory).clear();
-//        getDriver().findElement(suppcatergory).sendKeys(supp_category);
-//    }
-//
-//
-//
-//
-//    public static void setsuppcatergory(String suppliercatename) {
-//        getDriver().findElement(suppcatergory).clear();
-//        getDriver().findElement(suppcatergory).sendKeys(suppliercatename);
-//    }
     public static void suppcatergory() throws Exception {
         getDriver().findElement(suppcatergory).click();
         PageBase.hitEnter();
