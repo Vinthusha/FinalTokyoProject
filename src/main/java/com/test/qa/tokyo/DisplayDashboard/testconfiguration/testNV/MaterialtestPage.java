@@ -41,6 +41,7 @@ public class MaterialtestPage extends PageBase {
     }
     public static void sendtxtTest() {
         MethodBase.sendKeys(txtTest,"Gravity");
+        MethodBase.setText_ByID(txtTest,"Gravity");
 
 
     }

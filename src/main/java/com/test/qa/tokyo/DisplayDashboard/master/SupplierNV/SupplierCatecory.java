@@ -15,27 +15,36 @@ public class SupplierCatecory extends PageBase {
 
     private static By MenuTabSupplier = By.xpath("//*[@id=\"root\"]/div/section/section/header/ul/li[13]/a");
 
-    private static By plantSuplierCatPanel = By.xpath("//*[@id=\"root\"]/div/section/section/main/div/div[1]/div[1]/div[1]");
-    private static By btnAddSupplierCategory = By.xpath("//*[@id=\"root\"]/div/section/section/main/div/div[2]/div/div/div/div[1]/div/div[2]/div/button");
+    private static By plantSuplierCatPanel = By.xpath("//*[@id=\"root\"]/div/section/section/header/ul/li[14]/a");
+    private static By SupplierCategory = By.xpath("//*[@id=\"root\"]/div/section/section/main/div/div[1]/div[1]");
+    private static By AddCatecory = By.xpath("//*[@id=\"root\"]/div/section/section/main/div/div[2]/div/div/div/div[1]/div/div[2]/button");
+    private static By txtCatecory = By.id("supplier_category");
+    private static By txtsupplierCategory_description = By.id("supplierCategory_description");
 
-    private static By txtCatecory = By.id("supplier_name");
-    private static By txtsupplierCategory_description = By.xpath("//*[@id=\"supplierCategory_description\"]");
-
-    private static By butPlantSave = By.xpath("//*[@type=\"button\"][2]");
+    private static By butPlantSave = By.xpath("/html/body/div[3]/div/div[2]/div/div[2]/div[3]/button[2]");
 
     private static By masterMenu = By.xpath("//*[@id=\"root\"]/div/section/section/main/div/div[1]/div[1]/a[1]/div/div");
 
 
 
-    public static void clickSupCatpanel() {
+    public static void clickMenuTabSupplier() {
+
+        getDriver().findElement(MenuTabSupplier).click();
+    }
+
+    public static void clickplantSuplierCatPanel() {
 
         getDriver().findElement(plantSuplierCatPanel).click();
     }
-    /*
-        public static void clickAddpanel() {
+    public static void clickSupplierCategory() {
 
-            getDriver().findElement(btnAddSupplierCategory).click();
-        }*/
+        getDriver().findElement(SupplierCategory).click();
+    }
+    public static void clickAddCatecory() {
+
+        getDriver().findElement(AddCatecory).click();
+    }
+
     public static void setsupplier_category(String supplier_category) {
 
         getDriver().findElement(txtCatecory).sendKeys(supplier_category);

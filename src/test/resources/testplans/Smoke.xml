@@ -25,6 +25,7 @@
 
 
             <class name="master.Supplier.SupplierTest"></class>
+            <class name="master.SupplierCatecory.SupplierCatecoryTest"></class>
 
             <class name="master.Designation.DesignationTest"></class>
             <class name="master.Role.RoleTest"></class>

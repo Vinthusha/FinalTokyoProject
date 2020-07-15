@@ -45,10 +45,10 @@ public class EmployeeTest extends TestBase {
         EmployeeList.setfname("kalaivani");
         EmployeeList.setlname("Raja");
         MethodBase.click_ByXpath("//*[@id=\"plant\"]/div/div"); // click plant
-        PageBase.staticWait(01);
+        PageBase.staticWait(03);
         MethodBase.hitEnter();
         MethodBase.click_ByXpath("//*[@id=\"desigination\"]/div/div"); // click designation
-        PageBase.staticWait(01);
+        PageBase.staticWait(03);
         MethodBase.hitEnter();
         EmployeeList.setaddress("colombo");
         EmployeeList.setnumber("0769835695");

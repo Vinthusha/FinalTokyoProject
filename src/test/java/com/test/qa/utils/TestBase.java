@@ -53,13 +53,19 @@ public class TestBase {
 	public void closeBrowser() {
     	LOGGER.info("Closing Browser");
 
+<<<<<<< HEAD
 		//PageBase.closeDriver();
+=======
+
+>>>>>>> 460a897fd855e371300b368c97e28bba2ed83cd8
 
 		LOGGER.info("Browser Closed");
 	}
 
     @AfterMethod(alwaysRun = true)
     public void afterMethod(Method method, ITestResult result) {
+
         LOGGER.info("Executed test case name:" + method.getName() + " Execution Results : " + result.toString());
-    }
+		PageBase.closeDriver();
+	}
 }
