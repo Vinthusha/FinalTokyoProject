@@ -6,6 +6,8 @@ import com.test.qa.tokyo.DisplayDashboard.master.PlantNV.PlantPanel;
 import com.test.qa.utils.TestBase;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+import utils.MethodBase;
+import utils.PageBase;
 
 import java.util.logging.Logger;
 
@@ -47,6 +49,7 @@ public class PlantTest  extends TestBase {
         PlantPanel.clickMasterPanel();
         PlantPanel.clickPlantpanel();
         PlantPanel.clickAddpanel();
+       // softAssert.assertEquals(MethodBase.get_Text("/html/body/div[8]/div/div[2]/div/div[2]/div[3]/div/button[2]"),"set code cannot be EMPTY","Not Equal");
         PlantPanel.setCode("NPX");
         PlantPanel.setName("Mullaithivu");
         PlantPanel.setAddress("Mullaithivu");

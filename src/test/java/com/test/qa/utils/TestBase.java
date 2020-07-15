@@ -49,11 +49,16 @@ public class TestBase {
         LOGGER.info("Test name: " + method.getName());
     }
 
+    
+
+
+
+
 
     @AfterMethod(alwaysRun = true)
     public void afterMethod(Method method, ITestResult result) {
 
         LOGGER.info("Executed test case name:" + method.getName() + " Execution Results : " + result.toString());
-		PageBase.closeDriver();
+		//PageBase.closeDriver();
 	}
 }

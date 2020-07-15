@@ -67,7 +67,7 @@ public class Equipment extends PageBase {
         getDriver().findElement(EditBtn).click();
     }
     public static void ClickDeletebtn(){
-        PageBase.staticWait(02);
+        PageBase.staticWait(03);
         getDriver().findElement(DltBtn).click();
 
     }
