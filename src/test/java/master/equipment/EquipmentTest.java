@@ -32,7 +32,8 @@ public class EquipmentTest extends TestBase {
         Equipment.clicksavebtn();
         // this is for check the delete button
         Equipment.ClickDeletebtn();
-        MethodBase.click_ByXpath("/html/body/div[8]/div/div/div/div[2]/div/div/div[2]/button[2]");
+        Equipment.dlt();
+
         softAssert.assertAll();
     }
 

@@ -53,7 +53,7 @@ public class TestBase {
 	public void closeBrowser() {
     	LOGGER.info("Closing Browser");
 
-		PageBase.closeDriver();
+		//PageBase.closeDriver();
 
 		LOGGER.info("Browser Closed");
 	}

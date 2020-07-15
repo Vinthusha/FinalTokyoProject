@@ -19,6 +19,10 @@ public class Equipment extends PageBase {
     private static By txtdescription =By.id("equipment_description");
     private static By type =By.xpath("//*[@id=\"type\"]/div/div");
     private static By btnsave =By.xpath("/html/body/div[6]/div/div[2]/div/div[2]/div[3]/button[2]");
+    private static By EditBtn = By.xpath("//*[@id=\"root\"]/div/section/section/main/div/div[2]/div/div/div/div[2]/div/table/tbody/tr[2]/td[4]/span/a[1]/i");
+    private static By DltBtn = By.xpath("//*[@id=\"root\"]/div/section/section/main/div/div[2]/div/div/div/div[2]/div/table/tbody/tr[2]/td[4]/span/a[2]/a/i");
+    private static By DltBtnClick = By.xpath("/html/body/div[8]/div/div/div/div[2]/div/div/div[2]/button[2]");
+
 
     // method for mastermenu
     public static void clickMasterPanel() {
@@ -52,18 +56,23 @@ public class Equipment extends PageBase {
     }
     // Metgod for clicksavebtn
     public static void clicksavebtn(){
-        PageBase.staticWait(01);
+        PageBase.staticWait(02);
         getDriver().findElement(btnsave).click();
     }
     public static boolean isDisplayed(){
         return MethodBase.isDisplayed_ByXpath("//*[@id=\"root\"]/div/section/section/main/div/div[2]/div/div/div/div[1]/div/div[1]");
     }
     public static void clickEditButton(){
-        PageBase.staticWait(01);
-        MethodBase.click_ByXpath("//*[@id=\"root\"]/div/section/section/main/div/div[2]/div/div/div/div[2]/div/table/tbody/tr/td[4]/span/a[1]/i");
+        PageBase.staticWait(02);
+        getDriver().findElement(EditBtn).click();
     }
     public static void ClickDeletebtn(){
-        PageBase.staticWait(01);
-        MethodBase.click_ByXpath("//*[@id=\"root\"]/div/section/section/main/div/div[2]/div/div/div/div[2]/div/table/tbody/tr[2]/td[4]/span/a[2]/a/i");
+        PageBase.staticWait(02);
+        getDriver().findElement(DltBtn).click();
+
+    }
+    public static void dlt(){
+        PageBase.staticWait(02);
+        getDriver().findElement(DltBtnClick).click();
     }
 }
