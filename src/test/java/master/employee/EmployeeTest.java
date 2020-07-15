@@ -34,7 +34,7 @@ public class EmployeeTest extends TestBase {
         EmployeeList.setnumber("contactno");
         EmployeeList.setemail("email");
         EmployeeList.clicksavebtn();
-     softAssert.assertAll();
+        softAssert.assertAll();
      }
 
     @Test(groups = {"Smoke"}, priority = 1)
@@ -59,6 +59,6 @@ public class EmployeeTest extends TestBase {
         EmployeeList.setnumber("0769835695");
         EmployeeList.setemail("Kalai25@gmail.com");
         EmployeeList.clicksavebtn();
-        softAssert.assertAll();
+      //  softAssert.assertAll();
     }
 }

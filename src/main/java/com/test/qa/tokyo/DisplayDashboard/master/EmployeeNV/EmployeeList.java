@@ -6,7 +6,6 @@ import org.testng.asserts.SoftAssert;
 import utils.PageBase;
 /**
  * @Author L.Vinthusha
- * 10/07/2020
  */
 
 public class EmployeeList extends PageBase {
