@@ -47,7 +47,7 @@ public class PlantTest  extends TestBase {
         PlantPanel.clickMasterPanel();
         PlantPanel.clickPlantpanel();
         PlantPanel.clickAddpanel();
-        PlantPanel.setCode("C001");
+        PlantPanel.setCode("NPX");
         PlantPanel.setName("Mullaithivu");
         PlantPanel.setAddress("Mullaithivu");
         PlantPanel.setContacno("07696993569");
