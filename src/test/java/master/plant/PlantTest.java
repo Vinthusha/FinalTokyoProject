@@ -54,7 +54,7 @@ public class PlantTest  extends TestBase {
         PlantPanel.setName("Mullaithivu");
         PlantPanel.setAddress("Mullaithivu");
         PlantPanel.setContacno("07696993569");
-        PlantPanel.setFax("07696993569");
+        PlantPanel.setFax("07696993589");
         PlantPanel.setDescription("Description");
         PlantPanel.clickSavebutten();
         softAssert.assertAll();
