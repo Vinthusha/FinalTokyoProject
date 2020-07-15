@@ -39,7 +39,7 @@ public class AddPlantEquipment extends PageBase {
 
     public static void selectPlanteuip() throws Exception {
         getDriver().findElement(dropequipment).click();
-        PageBase.staticWait(01);
+        PageBase.staticWait(02);
         PageBase.hitEnter();
     }
     public static void selectPlantplant() throws Exception {
@@ -60,6 +60,7 @@ public class AddPlantEquipment extends PageBase {
     }
 
     public static void clickbut() {
+        PageBase.staticWait(02);
         getDriver().findElement(butSave).click();
     }
     public static boolean isDisplayed(){
