@@ -2,6 +2,7 @@ package com.test.qa.tokyo.DisplayDashboard.master.equipmentNV;
 
 import org.openqa.selenium.By;
 import org.testng.asserts.SoftAssert;
+import utils.MethodBase;
 import utils.PageBase;
 
 public class Equipment extends PageBase {
@@ -47,10 +48,22 @@ public class Equipment extends PageBase {
 
     public static void selecttype() throws Exception {
         getDriver().findElement(type).click();
-        PageBase.hitEnter();
+        MethodBase.hitEnter();
     }
     // Metgod for clicksavebtn
     public static void clicksavebtn(){
+        PageBase.staticWait(01);
         getDriver().findElement(btnsave).click();
+    }
+    public static boolean isDisplayed(){
+        return MethodBase.isDisplayed_ByXpath("//*[@id=\"root\"]/div/section/section/main/div/div[2]/div/div/div/div[1]/div/div[1]");
+    }
+    public static void clickEditButton(){
+        PageBase.staticWait(01);
+        MethodBase.click_ByXpath("//*[@id=\"root\"]/div/section/section/main/div/div[2]/div/div/div/div[2]/div/table/tbody/tr/td[4]/span/a[1]/i");
+    }
+    public static void ClickDeletebtn(){
+        PageBase.staticWait(01);
+        MethodBase.click_ByXpath("//*[@id=\"root\"]/div/section/section/main/div/div[2]/div/div/div/div[2]/div/table/tbody/tr[2]/td[4]/span/a[2]/a/i");
     }
 }

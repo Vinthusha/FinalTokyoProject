@@ -2,6 +2,7 @@ package com.test.qa.tokyo.DisplayDashboard.master.equipmentNV;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
+import utils.MethodBase;
 import utils.PageBase;
 
 public class AddPlantEquipment extends PageBase {
@@ -38,6 +39,7 @@ public class AddPlantEquipment extends PageBase {
 
     public static void selectPlanteuip() throws Exception {
         getDriver().findElement(dropequipment).click();
+        PageBase.staticWait(01);
         PageBase.hitEnter();
     }
     public static void selectPlantplant() throws Exception {
@@ -59,6 +61,9 @@ public class AddPlantEquipment extends PageBase {
 
     public static void clickbut() {
         getDriver().findElement(butSave).click();
+    }
+    public static boolean isDisplayed(){
+        return MethodBase.isDisplayed_ByXpath("//*[@id=\"root\"]/div/section/section/main/div/div[2]/div/div/div/div/div[1]/div/div[1]");
     }
 
 }

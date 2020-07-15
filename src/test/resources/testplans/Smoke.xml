@@ -16,7 +16,7 @@
 
 
             <class name="master.plant.PlantTest"></class>
-            <class name="master.equipment.EqupmentTest"></class>
+            <class name="master.equipment.EquipmentTest"></class>
             <class name="master.equipment.AddPlantEquipmentTest"></class>
 
             <class name="master.Customer.CustomerTest"></class>

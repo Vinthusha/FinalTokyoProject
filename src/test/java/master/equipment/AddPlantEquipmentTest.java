@@ -7,10 +7,37 @@ import com.test.qa.tokyo.LoginPage;
 import com.test.qa.utils.TestBase;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+import utils.MethodBase;
 
-
+/**
+ * Author Daclas
+ */
 public class AddPlantEquipmentTest extends TestBase {
-    @Test(groups = {"test", "regression", "smoke"}, priority = 2, dataProviderClass = EquipmentData.class, dataProvider = "equipmentdataprovider")
+    @Test(groups = {"Smoke"}, priority = 1)
+    public void plantequipmentSmokeTest() throws Exception {
+        softAssert = new SoftAssert();
+        AddPlantEquipment.clickMasterPanel();
+        AddPlantEquipment.clickEquipmentPanel();
+        AddPlantEquipment.clickplantequipmentField();
+        softAssert.assertTrue(AddPlantEquipment.isDisplayed(), "Page is not visible");
+        AddPlantEquipment.clickAddPlantEquipment();
+        AddPlantEquipment.clickbut();
+        softAssert.assertEquals(MethodBase.get_Text("/html/body/div[8]/div/div[2]/div/div[2]/div[2]/form/div[1]/div[1]/div/div[1]"),"Serial No can't be empty","there are not equal");
+        AddPlantEquipment.setSerialno("S002");
+        AddPlantEquipment.selectPlanteuip();
+        AddPlantEquipment.selectPlantplant();
+        AddPlantEquipment.setbrandname("bans");
+        AddPlantEquipment.setmodelnmae("S0015");
+        AddPlantEquipment.setdescription("data");
+        AddPlantEquipment.clickbut();
+        softAssert.assertAll();
+    }
+}
+
+
+
+
+   /* @Test(groups = {"test", "regression"}, priority = 2, dataProviderClass = EquipmentData.class, dataProvider = "equipmentdataprovider")
     public void TokiyoequipmentTest(String serialno, String equipment, String plant, String brandname, String modelname, String descripion) throws Exception {
         softAssert = new SoftAssert();
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "LoginPage Displayed");
@@ -25,23 +52,7 @@ public class AddPlantEquipmentTest extends TestBase {
         AddPlantEquipment.clickbut();
         softAssert.assertAll();
 
-    }
-    @Test(groups = {"Smoke"}, priority = 1)
-    public void plantequipmentSmokeTest() throws Exception {
-        AddPlantEquipment.clickMasterPanel();
-        AddPlantEquipment.clickEquipmentPanel();
-        AddPlantEquipment.clickplantequipmentField();
-        AddPlantEquipment.clickAddPlantEquipment();
-        AddPlantEquipment.setSerialno("S002");
-        AddPlantEquipment.selectPlanteuip();
-        AddPlantEquipment.selectPlantplant();
-        AddPlantEquipment.setbrandname("bans");
-        AddPlantEquipment.setmodelnmae("S0015");
-        AddPlantEquipment.setdescription("data");
-        AddPlantEquipment.clickbut();
-        softAssert.assertAll();
-    }
-}
+    }*/
 
 
 
