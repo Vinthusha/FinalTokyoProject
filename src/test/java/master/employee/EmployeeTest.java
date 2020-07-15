@@ -59,6 +59,8 @@ public class EmployeeTest extends TestBase {
         EmployeeList.setnumber("0769835695");
         EmployeeList.setemail("Kalai25@gmail.com");
         EmployeeList.clicksavebtn();
+        softAssert.assertEquals(MethodBase.get_Text("//*[@id=\"root\"]/div/section/section/main/div/div[2]/div/div/div/div/div[1]/div/div[2]/div[1]/div"),"Name can't be empty","there are not equal");
+
       //  softAssert.assertAll();
     }
 }
