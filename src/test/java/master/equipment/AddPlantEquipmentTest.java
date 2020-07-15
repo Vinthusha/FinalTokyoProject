@@ -31,9 +31,9 @@ public class AddPlantEquipmentTest extends TestBase {
         AddPlantEquipment.setmodelnmae("S0015");
         AddPlantEquipment.setdescription("data");
         AddPlantEquipment.clickbut();
-        PageBase.staticWait(01);
+        PageBase.staticWait(03);
         MethodBase.click_ByXpath("//*[@id=\"root\"]/div/section/section/main/div/div[2]/div/div/div/div/div[2]/div/table/tbody/tr[2]/td[7]/span/a[2]/a/i");
-        PageBase.staticWait(01);
+        PageBase.staticWait(03);
         MethodBase.click_ByXpath("/html/body/div[11]/div/div/div/div[2]/div/div/div[2]/button[2]");
         softAssert.assertAll();
     }

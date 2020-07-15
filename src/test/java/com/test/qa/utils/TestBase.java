@@ -50,14 +50,7 @@ public class TestBase {
     }
 
     
-    @AfterMethod(alwaysRun = true)
-	public void closeBrowser() {
-    	LOGGER.info("Closing Browser");
 
-		//PageBase.closeDriver();
-
-		LOGGER.info("Browser Closed");
-	}
 
 
 
@@ -66,6 +59,6 @@ public class TestBase {
     public void afterMethod(Method method, ITestResult result) {
 
         LOGGER.info("Executed test case name:" + method.getName() + " Execution Results : " + result.toString());
-		PageBase.closeDriver();
+		//PageBase.closeDriver();
 	}
 }

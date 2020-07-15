@@ -6,6 +6,8 @@ import com.test.qa.tokyo.DisplayDashboard.master.PlantNV.PlantPanel;
 import com.test.qa.utils.TestBase;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+import utils.MethodBase;
+import utils.PageBase;
 
 import java.util.logging.Logger;
 
