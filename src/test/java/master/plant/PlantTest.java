@@ -49,7 +49,7 @@ public class PlantTest  extends TestBase {
         PlantPanel.clickMasterPanel();
         PlantPanel.clickPlantpanel();
         PlantPanel.clickAddpanel();
-        softAssert.assertEquals(MethodBase.get_Text("/html/body/div[8]/div/div[2]/div/div[2]/div[3]/div/button[2]"),"set code cannot be EMPTY","Not Equal");
+       // softAssert.assertEquals(MethodBase.get_Text("/html/body/div[8]/div/div[2]/div/div[2]/div[3]/div/button[2]"),"set code cannot be EMPTY","Not Equal");
         PlantPanel.setCode("NPX");
         PlantPanel.setName("Mullaithivu");
         PlantPanel.setAddress("Mullaithivu");
