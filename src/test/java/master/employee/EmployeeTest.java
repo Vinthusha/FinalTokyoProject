@@ -2,6 +2,7 @@ package master.employee;
 
 import com.test.qa.testdata.masterdata.EmployeeData;
 import com.test.qa.tokyo.DisplayDashboard.master.EmployeeNV.EmployeeList;
+import com.test.qa.tokyo.DisplayDashboard.master.equipmentNV.Equipment;
 import com.test.qa.utils.TestBase;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -23,6 +24,8 @@ public class EmployeeTest extends TestBase {
         EmployeeList.clickbtnEmployee();
         EmployeeList.clickAddEmployee();
         softAssert.assertTrue(EmployeeList.isdashboardDisplay(), "AddEmployeePanal displayed");
+        softAssert.assertEquals(MethodBase.get_Text("/html/body/div[9]/div/div[2]/div/div[2]/div[3]/button[2]"),"Name can't be empty","there are not equal");
+
         EmployeeList.setfname("fname");
         EmployeeList.setlname("lname");
         EmployeeList.selectPlantOption1();
@@ -41,14 +44,16 @@ public class EmployeeTest extends TestBase {
         EmployeeList.clickEmployee();
         EmployeeList.clickbtnEmployee();
         EmployeeList.clickAddEmployee();
-//        softAssert.assertTrue(EmployeeList.isdashboardDisplay(), "AddEmployeePanal displayed");
+        softAssert.assertTrue(EmployeeList.isdashboardDisplay(), "AddEmployeePanal displayed");
+        EmployeeList.clicksavebtn();
+        softAssert.assertEquals(MethodBase.get_Text("/html/body/div[9]/div/div[2]/div/div[2]/div[3]/button[2]"),"Name can't be empty","there are not equal");
         EmployeeList.setfname("kalaivani");
         EmployeeList.setlname("Raja");
         MethodBase.click_ByXpath("//*[@id=\"plant\"]/div/div"); // click plant
-        PageBase.staticWait(01);
+        PageBase.staticWait(03);
         MethodBase.hitEnter();
         MethodBase.click_ByXpath("//*[@id=\"desigination\"]/div/div"); // click designation
-        PageBase.staticWait(01);
+        PageBase.staticWait(03);
         MethodBase.hitEnter();
         EmployeeList.setaddress("colombo");
         EmployeeList.setnumber("0769835695");
