@@ -48,15 +48,7 @@ public class TestBase {
     public void nameBefore(Method method) {
         LOGGER.info("Test name: " + method.getName());
     }
-    
 
-<<<<<<< HEAD
-=======
-		//PageBase.closeDriver();
-
-		LOGGER.info("Browser Closed");
-	}
->>>>>>> 002e314e4af199e55a383b3c9c1c3637c70ab615
 
     @AfterMethod(alwaysRun = true)
     public void afterMethod(Method method, ITestResult result) {
